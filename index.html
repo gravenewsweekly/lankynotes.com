@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LankyNotes - Chess Journey</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            color: #fff;
+            overflow-x: hidden;
+            animation: gradientBG 10s ease infinite;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* 4D Shadow Effect */
+        .shadow-4d {
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5),
+                         -3px -3px 5px rgba(255, 255, 255, 0.1),
+                         5px 5px 10px rgba(0, 0, 0, 0.3),
+                         0 0 20px rgba(255, 255, 255, 0.2);
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        .navbar h1 {
+            font-size: 28px;
+            font-weight: bold;
+            color: #ffcc00;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        .navbar a:hover {
+            color: #ffcc00;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            padding: 50px;
+            background: url('chess-background.jpg') no-repeat center center/cover;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero h1 {
+            font-size: 60px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            z-index: 1;
+        }
+
+        .hero p {
+            font-size: 24px;
+            max-width: 700px;
+            opacity: 0.9;
+            z-index: 1;
+        }
+
+        /* Chess Journey Section */
+        .journey {
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .journey h2 {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .journey p {
+            font-size: 18px;
+            max-width: 800px;
+            margin: auto;
+            opacity: 0.9;
+        }
+
+        /* Why Chess.com? */
+        .why-chess {
+            padding: 80px 20px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .why-chess h2 {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .why-chess p {
+            font-size: 18px;
+            max-width: 800px;
+            margin: auto;
+            opacity: 0.9;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            font-size: 16px;
+        }
+
+        /* Button Style */
+        .btn {
+            display: inline-block;
+            padding: 15px 25px;
+            font-size: 20px;
+            background: #ffcc00;
+            color: #222;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.3s;
+            margin-top: 20px;
+            z-index: 1;
+        }
+
+        .btn:hover {
+            background: #ffaa00;
+            transform: scale(1.1);
+        }
+
+        /* Advanced 4D Card Effect */
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5),
+                        0 0 40px rgba(255, 255, 255, 0.1),
+                        0 0 60px rgba(0, 0, 0, 0.3);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 40px rgba(0, 0, 0, 0.7),
+                        0 0 60px rgba(255, 255, 255, 0.2),
+                        0 0 80px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <h1 class="shadow-4d">LankyNotes</h1>
+        <div>
+            <a href="index.html">Home</a>
+            <a href="chess.html">Chess Journey</a>
+            <a href="reason.html">Why Chess.com?</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1 class="shadow-4d">LankyNotes Chess Journey</h1>
+        <p>Exploring the world of chess with strategy, intelligence, and passion. Witness my journey through victories and defeats.</p>
+        <a href="chess.html"class="btn">Follow My Journey</a>
+    </div>
+
+    <!-- Chess Journey Section -->
+    <div class="journey">
+        <h2 class="shadow-4d">My Chess Journey</h2>
+        <p>My passion for chess started at a young age, and over the years, I have grown into a competitive player. I have played thousands of games, analyzed strategies, and continuously improved my skills. Chess is not just a game; it's a battle of the mind.</p>
+    </div>
+
+    <!-- Why Chess.com? -->
+    <div class="why-chess">
+        <h2 class="shadow-4d">Why Chess.com and Not Lichess?</h2>
+        <p>I chose Chess.com over Lichess.org because of its superior interface, strong AI, better competition, and in-depth analysis tools. Chess.com provides a platform where I can challenge myself against top-rated players while learning from the best.</p>
+        <div class="card">
+            <p>Lichess.org? More like "Lame-chess.org." Their founder must have been playing blindfolded when they designed that site. No wonder it's free—nobody would pay for that!</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2025 LankyNotes | All Rights Reserved.</p>
+    </div>
+</body>
+</html>
